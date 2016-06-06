@@ -32,7 +32,9 @@
         "formatOnSave": true
     },
     "files": [
+        "src/index.d.ts",
         "src/index.ts",
+        "src/app/CorsPlugin.d.ts",
         "src/app/CorsPlugin.ts",
         "typings/index.d.ts"
     ]
