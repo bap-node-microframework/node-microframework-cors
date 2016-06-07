@@ -10,6 +10,7 @@ var CorsPlugin = (function () {
                 callback(null, true);
             }
         };
+        core_1.Container.setApplicationInstance(container);
         core_1.Container.getApplicationInstance().get('app').use(cors(this.instance));
     }
     CorsPlugin.prototype.getInstance = function () {
