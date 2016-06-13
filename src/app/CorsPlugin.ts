@@ -12,6 +12,7 @@ export class CorsPlugin {
                 callback(null, true);
             }
         };
+        Container.setApplicationInstance(container);
         Container.get('app').use(cors(this.instance));
     }
 
