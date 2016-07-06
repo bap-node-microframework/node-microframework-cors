@@ -3,9 +3,10 @@ var cors = require('cors');
 var core_1 = require('bap-node-microframework/core');
 var CorsPlugin = (function () {
     function CorsPlugin(container, options) {
+        if (options === void 0) { options = { credentials: true, origin: false }; }
         this.name = 'cors';
         this.instance = {
-            credentials: options.credentials || true,
+            credentials: options.credentials,
             origin: options.origin || function (origin, callback) {
                 callback(null, true);
             }
