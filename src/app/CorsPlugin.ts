@@ -5,9 +5,9 @@ export class CorsPlugin {
     private instance: any;
     private name: String = 'cors';
 
-    constructor(container, options) {
+    constructor(container, options = { credentials: true, origin: false }) {
         this.instance = {
-            credentials: options.credentials || true,
+            credentials: options.credentials,
             origin: options.origin || function(origin, callback) {
                 callback(null, true);
             }
